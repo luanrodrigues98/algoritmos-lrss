@@ -40,7 +40,7 @@ class Matrix{
 			delete[] matriz;
 		}
 		
-        // Função para preencher uma matriz de dados.
+        // FunÃ§Ã£o para preencher uma matriz de dados.
 		void preencherMatriz() {
             cout << endl << "Informe os valores desejados para a Matriz!!" << endl << endl;
 
@@ -52,9 +52,9 @@ class Matrix{
             }
         }
         
-        // Função para IMPRIMIR uma matriz de dados.
+        // FunÃ§Ã£o para IMPRIMIR uma matriz de dados.
         void imprimirMatriz() {
-            cout << endl << "Imprimindo a Matriz!!" << endl << endl; // endl = \n end of line
+            cout << endl << "Imprimindo a Matriz!!" << endl << endl;
 
             for(unsigned i=0; i < linhas; i++){
                 for(unsigned j=0; j < colunas; j++){
