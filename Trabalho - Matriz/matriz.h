@@ -14,7 +14,7 @@ class Matrix{
 	public:
 
 		Matrix(int lin, int col);
-		Matrix(const Matrix &outroObjeto);
+		Matrix(Matrix &outroObjeto);
 		~Matrix();
 
 		int getLinhas();
