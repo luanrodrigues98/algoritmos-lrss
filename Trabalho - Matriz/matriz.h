@@ -20,8 +20,9 @@ class Matrix{
 		int getLinhas();
 		int getColunas();
 
-		int* operator[](int y);
+		int* operator[] (int x); 
 		Matrix& operator=(Matrix &obj);
+		bool operator==(Matrix &obj);
 
 		void alocarEspacoMatriz(int lin, int col);
 		void desalocaEspaco(int col);

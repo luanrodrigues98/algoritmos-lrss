@@ -33,7 +33,7 @@ Matrix::Matrix(int lin, int col) {
 
 // Construtor de cópia.
 // Recebe o endereço de um outro objeto do tipo Matrix.
-Matrix::Matrix(const Matrix &outroObjeto){
+Matrix::Matrix(Matrix &outroObjeto){
 
     colunas = outroObjeto.colunas;
     linhas = outroObjeto.linhas;
@@ -42,7 +42,7 @@ Matrix::Matrix(const Matrix &outroObjeto){
 
     for (int i=0; i < linhas; i++){
         for (int j=0; j < colunas; j++){
-            matriz[i][j] = outroObjeto.matriz[i][j];
+            matriz[i][j] = outroObjeto[i][j];
         }
     }
 }
@@ -62,13 +62,28 @@ Matrix& Matrix::operator=(Matrix &obj){
 
     for (int i=0; i < colunas; i++){
         for (int j=0; j < linhas; j++){
-            matriz[i][j] = obj.matriz[i][j];
+            matriz[i][j] = obj[i][j];
         }
     }
 
     return *this;
 }
 
+bool Matrix::operator==(Matrix &obj){ //permite verificar se uma matriz e igual a outra
+	
+	if ((linhas != obj.linhas) || (colunas != obj.colunas)){	
+		return false;
+	}else{
+		for(int i = 0; i < linhas; i++){
+			for(int j = 0; j < colunas; j++){
+				if ((matriz[i][j] != obj[i][j])){
+					return false;
+				}
+			}
+		}
+	}	
+	return true;
+}
 
 int Matrix::getLinhas(){
     return linhas;
@@ -80,9 +95,14 @@ int Matrix::getColunas(){
 
 //Exclui as funções setLinhas e setColunas, pois não estavam sendo utilizadas.
 
-int* Matrix::operator[](int const y) { 
-    return &matriz[0][y];
+int* Matrix::operator[] (int x) { //permite acesso direto aos valores da matriz
+    return matriz[x];
 
 }
 
+
+/*/ O overload dos colchetes que estava sendo utilizado estava dando problema em obter o número de linhas e colunas de alguns objetos no momento
+    em que era usado para atribuir valores, em alguns estava acessando o número de linhas/colunas incorretamente, dando problema na memória 
+    por este motivo troquei a sintaxe dele para o de cima.                                              
+}/*/
 

@@ -7,16 +7,17 @@
 
 using namespace std;
 
-void preencherMatriz(Matrix &matriz); //Sugiro por essas funcoes fora da classe, pois elas são voltadas para o usuário e não para os objetos, sendo assim não precisam ficar lá
+void preencherMatriz(Matrix &matriz); //Sugiro por essas funções fora da classe, pois elas são voltadas para o usuário e não para os objetos, sendo assim não precisam ficar lá
 void imprimirMatriz(Matrix &matriz);
 
 int main(int argc, char **argv) {
     
     ::testing::InitGoogleTest(&argc, argv);
-    Matrix mat (2,2);
+    Matrix matriz (2,2);
     
-    preencherMatriz(mat);  //mudei a main pois com os testes não precisamos utilizar os overloads aqui, já que ja foram testados.
-    imprimirMatriz(mat);
+    preencherMatriz(matriz);  //mudei a main pois com os testes não precisamos utilizar os overloads aqui, já que ja foram testados.
+    imprimirMatriz(matriz);   
+    cout << "Aplicando testes para os overloads..." << endl;
 
     return RUN_ALL_TESTS();
 
@@ -24,7 +25,7 @@ int main(int argc, char **argv) {
 
 // Função para preencher uma matriz de dados.
 void preencherMatriz(Matrix &matriz) { 
-    cout << endl << "Informe os valores desejados para a Matriz!!" << endl << endl;
+    cout << endl << "Informe os valores desejados para uma Matriz 2x2!!" << endl << endl;
 
     for(int i=0; i < matriz.getLinhas(); i++){
         for(int j=0; j < matriz.getColunas(); j++){
