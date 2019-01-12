@@ -59,10 +59,17 @@ O método de busca binária recebe como parâmetros: o vetor, o valor buscado e 
 A função de busca ingênua recebe como parâmetros: o vetor, um ponteiro para o início e fim, o valor buscado e um contador. O contador possui a mesma função citada anteriormente, porém com a adição dos ponteiros para o início e fim, sendo possível, assim, determinar onde o vetor começa e termina. A função possui o mesmo tipo de retorno da busca binária.
 
 Houve simulações para avaliação dos custo dos algoritmos.
-O algoritmo de busca ingênua gera uma reta conforme o esperado. Para a confecção dos gráficos foi utilizado o programa GnuPlot e o script  para o fit da reta o qual está disponível em [script](algoritmos-lrss/buscas_e_codigos/graficos/script_ingenua.gnu), assim como o [gráfico]((algoritmos-lrss/buscas_e_codigos/graficos/GraficoBuscaIngenua.png) gerado por ela.
+O algoritmo de busca ingênua gera uma reta conforme o esperado. Para a confecção dos gráficos foi utilizado o programa GnuPlot e o script  para o fit da reta o qual está disponível em [script](algoritmos-lrss/buscas_e_codigos/graficos/script_ingenua.gnu), assim como o gráfico[1] gerado por ela.
 
-O algoritmo de busca binária descreveu uma função logarítmica de acordo com seu [gráfico](algoritmos-lrss/buscas_e_codigos/graficos/GraficoBuscaIngenua.png). Para seu fit foi utilizado o seguinte [script](algoritmos-lrss/buscas_e_codigos/graficos/script_binaria.gnu).
+O algoritmo de busca binária descreveu uma função logarítmica de acordo com seu gráfico[2]. Para seu fit foi utilizado o seguinte [script](algoritmos-lrss/buscas_e_codigos/graficos/script_binaria.gnu).
 
+**Gráficos:**
+
+[1]-
+[![Gráfico busca ingênua](https://raw.githubusercontent.com/luanrodrigues98/algoritmos-lrss/master/buscas_e_codigos/graficos/GraficoBuscaIngenua.png)](algoritmos-lrss/buscas_e_codigos/graficos/GraficoBuscaIngenua.png)
+
+[2]-
+[![Gráfico busca binária](https://raw.githubusercontent.com/luanrodrigues98/algoritmos-lrss/master/buscas_e_codigos/graficos/GraficoBuscaBinaria.png)](algoritmos-lrss/buscas_e_codigos/graficos/GraficoBuscaBinaria.png)
 
 **Referência Bibliográficas:**
 
