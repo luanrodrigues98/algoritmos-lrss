@@ -4,6 +4,7 @@
 **Introdução**:
 
 Para a criação ou utilização de um algoritmo é importante determinar seu desempenho. Cada um é projetado de uma maneira específica e deve executar uma função. Para isso o mesmo utiliza uma quantidade de memória e gasta um tempo determinado, como a busca por algo no Google.
+
 A solução de um problema requer diferentes algoritmos, por isso, como abordado anteriormente, é necessario fazer uma análise para avaliar diversos conceitos.
 
 **Qual sua importância?**
@@ -36,6 +37,7 @@ Avalia a complexidade de um algoritmo a partir da execução do mesmo quando imp
 **Quick Sort:**
 
 O quick sort é um algoritmo de ordenação rápida, o qual utiliza uma estrategia de divisão e conquista por meio de um procedimento recursivo.
+
 O vetor é particionado em dois subvetores não vazios, tais que os elementos à esquerda do vetor são menores do que os da direita. Para que aconteça o particionamento do vetor, é necessaria a escolha de um índice chamado de pivô. Tal  índice pode ser definido como sendo o início, fim ou meio do vetor. A conquista ocorre com o ordenamento dos dois subvetores gerados por meio de chamadas recursivas do quick sort.
 O pior caso para esse algoritmo ocorre na forma de **teta(n²)** e no melhor **teta(nlogn)**.
 
@@ -51,12 +53,17 @@ O consumo da busca binária é proporcional a **nlogn**.
 **Trabalho:**
 
 Foram realizados as implementações dos algoritmos de busca binária e ingênua. Nesse trabalho, para concepção do ordenamento necessário à busca, foi feita a implementação do algoritmo Quick Sort. Também realizados testes para avaliar a função de ordenação e do retorno dos ponteiros.
+
 O método de busca binária recebe como parâmetros: o vetor, o valor buscado e um contador. O contador tem a funcionalidade de retornar o número de interações realizadas para encontrar o valor. A função retorna o ponteiro para a posição do vetor onde se encontra o número, caso seja válido, se não se direciona ao ponteiro nulo.
+
 A função de busca ingênua recebe como parâmetros: o vetor, um ponteiro para o início e fim, o valor buscado e um contador. O contador possui a mesma função citada anteriormente, porém com a adição dos ponteiros para o início e fim, sendo possível, assim, determinar onde o vetor começa e termina. A função possui o mesmo tipo de retorno da busca binária.
+
 Houve simulações para avaliação dos custo dos algoritmos.
-O algoritmo de busca ingênua gera uma reta conforme o esperado. Para a confecção dos gráficos foi utilizado o programa GnuPlot e o script  para o fit da reta o qual está disponível em (link para script), assim como o (link para gráfico) gerado por ela.
-O algoritmo de busca binária descreveu uma função logarítmica de acordo com seu gráfico. Para seu fit foi utilizado o seguinte script (link script).
+O algoritmo de busca ingênua gera uma reta conforme o esperado. Para a confecção dos gráficos foi utilizado o programa GnuPlot e o script  para o fit da reta o qual está disponível em [script](algoritmos-lrss/buscas_e_codigos/graficos/script_ingenua.gnu), assim como o [gráfico]((algoritmos-lrss/buscas_e_codigos/graficos/GraficoBuscaIngenua.png) gerado por ela.
+
+O algoritmo de busca binária descreveu uma função logarítmica de acordo com seu [gráfico](algoritmos-lrss/buscas_e_codigos/graficos/GraficoBuscaIngenua.png). Para seu fit foi utilizado o seguinte [script](algoritmos-lrss/buscas_e_codigos/graficos/script_binaria.gnu).
 
 
 **Referência Bibliográficas:**
-[1]
+
+[1]- Estruturas de Dados: algoritmos, análise da complexidade e implementações em JAVA e C/C++ por Ana Fernanda Gomes Ascencio & Graziela Santos de Araújo.
